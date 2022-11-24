@@ -28,7 +28,7 @@ services:
       - APP_PORT=${APP_PORT}
     ports: 
       - "3000:3000" 
-    container_name: nest-todo-app-be
+    container_name: api-grrrrinder
     depends_on: 
       - db
     volumes: 

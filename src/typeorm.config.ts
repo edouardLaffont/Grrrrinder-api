@@ -17,6 +17,9 @@ const typeOrmConfig: TypeOrmModuleOptions = {
     __dirname + '/migration/**/*.js',
   ],
   synchronize: false,
+  cli: {
+    migrationsDir: 'src/migration'
+}
 };
 
 export = typeOrmConfig;

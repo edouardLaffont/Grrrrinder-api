@@ -10,10 +10,10 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('Todo APP')
-    .setDescription('Todo API documentation')
+    .setTitle('Grrrrrinder')
+    .setDescription('Grrrrinder API documentation')
     .setVersion('1.0')
-    .addTag('Todo')
+    .addTag('Grrrrinder')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
