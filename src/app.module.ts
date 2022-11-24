@@ -11,7 +11,16 @@ import { ConversationModule } from './conversation/conversation.module';
 import { MessageModule } from './message/message.module';
 
 @Module({
-  imports: [UserModule, PictureModule, ProfilModule, SearchModule, LikeModule, ReportModule, ConversationModule, MessageModule],
+  imports: [
+    UserModule,
+    PictureModule,
+    ProfilModule,
+    SearchModule,
+    LikeModule,
+    ReportModule,
+    ConversationModule,
+    MessageModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
