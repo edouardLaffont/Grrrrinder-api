@@ -6,10 +6,10 @@ export class Profil {
   id: string;
 
   @Column()
-  kind: 'chat' | 'chien';
+  kind: 'cat' | 'dog';
 
   @Column()
-  sex: 'mâle' | 'femelle';
+  sex: 'male' | 'female';
 
   @Column()
   age: number;

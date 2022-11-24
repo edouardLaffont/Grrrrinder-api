@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import { Message } from 'src/message/entity/message.entity';
 import { User } from 'src/user/entity/user.entity';
 import {
     Entity,
@@ -7,7 +8,6 @@ import {
     OneToMany,
     PrimaryGeneratedColumn,
   } from 'typeorm';
-  import { Message } from './message.entity';
   
   @Entity()
   export class Conversation {

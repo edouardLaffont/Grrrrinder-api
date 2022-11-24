@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
+import { Conversation } from 'src/conversation/entity/conversation.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { Conversation } from './conversation.entity';
 
 @Entity()
 export class Message {

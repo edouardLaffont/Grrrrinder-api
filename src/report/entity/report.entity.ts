@@ -7,7 +7,7 @@ export class Report {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @ManyToOne(() => User, (user) => user.report)
+  @ManyToOne(() => User, (user) => user.reports)
   complainentUser: User;
 
   @Column()

@@ -3,6 +3,7 @@ import {
     Column,
     Entity,
     JoinColumn,
+    OneToMany,
     OneToOne,
     PrimaryGeneratedColumn,
     Unique,
@@ -11,6 +12,8 @@ import {
 import { Search } from 'src/search/entity/search.entity';
 import { Profil } from 'src/profil/entity/profil.entity';
 import { Picture } from 'src/picture/entity/picture.entity';
+import { Report } from 'src/report/entity/report.entity';
+import { Like } from 'src/like/entity/like.entity';
   
   @Entity()
   @Unique(['username'])
@@ -44,6 +47,15 @@ import { Picture } from 'src/picture/entity/picture.entity';
     @OneToOne(() => Picture)
     @JoinColumn()
     picture: Picture
+
+    @OneToMany(() => Report, (report) => report.complainentUser)
+    reports: Report[]
+
+    @OneToMany(() => Like, (like) => like.receiverUser)
+    receiverLikes: Like[]
+
+    @OneToMany(() => Like, (like) => like.senderUser)
+    senderLikes: Like[]
   
     async validatePassword(password: string): Promise<boolean> {
       const hash = await bcrypt.hash(password, this.salt);
